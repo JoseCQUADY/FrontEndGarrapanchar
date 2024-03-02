@@ -1,0 +1,108 @@
+html,
+body {
+    overflow-x: hidden; /* Prevent scroll on narrow devices */
+    margin: 0;
+}
+
+body {
+    padding-top: 56px;
+}
+
+.offcanvas-collapse {
+    position: fixed;
+    text-align: center;
+    top: 56px; /* Height of navbar */
+    bottom: 0;
+    right: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background: linear-gradient(to right, #e3f2fd 50%, rgba(255, 255, 255, 0) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .3s ease-out;
+}
+
+.offcanvas-collapse.open{
+    visibility: visible;
+    transform: translateX(100%);
+    background-position: left bottom;
+}
+
+#navbar.open { background-position: left bottom; }
+#navbar { 
+    background: linear-gradient(to right, #e3f2fd 50%, rgba(255, 255, 255, 0) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .3s ease-out;
+}
+
+nav > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li{ padding: 30px; }
+#ubication{ top: 20px;}
+#view{ bottom: 20px; }
+
+.buttonPlus {
+    position: absolute;
+    border: none;
+    right: 15px;
+    bottom: 7px;
+    width: 40px;
+    height: 40px;
+    height: 5em;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    z-index: 1;
+}
+
+#location{
+    float: right;
+    right: 15px;
+    top: 7px;
+    width: auto;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.171);
+    border-radius: 15px 0 0 15px;
+    padding: 5px;
+    z-index: 2;
+}
+
+a-scene{ z-index: -1;}
+
+#location p{
+    display: block;
+    font-size: 16px;
+    color: white;
+}
+
+.limitChr{
+    width: 100%;
+    text-align: right;
+    margin-top: 15px;
+    color: #737373;
+}
+
+#txtAreaDiv, #limitChartxt{ display: none;}
+
+#div3D{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+p#o{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
